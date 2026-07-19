@@ -6,6 +6,7 @@ sap.ui.define([
 ], function (MockServer, JSONModel, UriParameters, Log) {
     "use strict";
 
+    // Mock server bootstrap for local development and integration tests.
     var oMockServer,
         _sAppPath = "ns/html5module/",
         _sJsonFilesPath = _sAppPath + "localService/mockdata";
@@ -90,7 +91,7 @@ sap.ui.define([
                     oMockServer.setRequests(aRequests);
                     oMockServer.start();
 
-                    Log.info("Running the app with mock data");
+                    Log.info("Running the app with mock data (local mock server active)");
                     fnResolve();
                 });
 
