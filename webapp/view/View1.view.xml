@@ -6,6 +6,15 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
+					<subHeader>
+						<Toolbar id="searchToolbar">
+							<SearchField id="productSearch"
+								width="100%"
+								placeholder="{i18n>searchPlaceholder}"
+								search=".onSearchProducts"
+								liveChange=".onSearchProducts" />
+						</Toolbar>
+					</subHeader>
 					<content>
 						<List id="productList"
 							headerText="{i18n>productListTitle}"
@@ -14,7 +23,8 @@
 								title="{name}"
 								description="{category}"
 								info="{price}"
-								type="Active" />
+								type="Active"
+								press=".onProductPress" />
 						</List>
 					</content>
 				</Page>
