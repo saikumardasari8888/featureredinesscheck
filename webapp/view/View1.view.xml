@@ -6,7 +6,17 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content></content>
+					<content>
+						<List id="productList"
+							headerText="{i18n>productListTitle}"
+							items="{/products}">
+							<StandardListItem
+								title="{name}"
+								description="{category}"
+								info="{price}"
+								type="Active" />
+						</List>
+					</content>
 				</Page>
 			</pages>
 		</App>
